@@ -52,6 +52,7 @@ if st.sidebar.button("Recalculate"):
     # Display the results
     st.write(f"**Calculated Power:** {power:.2f} kWatt")
     st.write(f"**Calculated Voltage:** {voltage:.2f} V")
+    st.write(f"**System Resistance:** {system_resistance:.2f} Ohm")
     #st.line_chart(chart_data)
 
 # Instructions for the user
