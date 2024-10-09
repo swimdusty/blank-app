@@ -42,12 +42,12 @@ coil_length = 300*TMS_zdim + 100*TMS_width
 temp_dependent_resistivity = copper_resistivity*(1 + temp_coefficient*(coil_temp - temp_0))
 coil_resistance = temp_dependent_resistivity * coil_length / copper_area
 PS_connector_resistance = temp_dependent_resistivity * PS_connector_length * PS_connector_efficiency / copper_area
-total_resistance = coil_resistance + PS_connector_resistance + corner_resistance
+system_resistance = coil_resistance + PS_connector_resistance + corner_resistance
 
 # Button to recalculate
 if st.sidebar.button("Recalculate"):
     # Perform the recalculation
-    power, voltage = recalculate(total_resistance, coil_current)
+    power, voltage = recalculate(system_resistance, coil_current)
     
     # Display the results
     st.write(f"**Calculated Power:** {power:.2f} kWatt")
