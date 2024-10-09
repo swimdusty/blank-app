@@ -3,6 +3,7 @@ import streamlit as st
 def recalculate(resistance, current):
     voltage = current * resistance
     power = current * voltage
+    power = power / 1000
     return power, voltage
 #definitions
 kA_turns = 30 #kA-turns
