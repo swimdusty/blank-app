@@ -8,7 +8,7 @@ def recalculate(resistance, current):
 #definitions
 kA_turns = 30 #kA-turns
 mag_field = 1 #Tesla
-TMS_zdim = 7.0 #meter
+TMS_zdim = 7.4 #meter
 copper_area = 0.0016 #meters^2
 copper_resistivity = 0.0000000168 #Ohm*meter
 temp_coefficient = 0.00404 #Kelvin^(-1)
@@ -22,7 +22,7 @@ st.title("Coil and Power Spec Calculator (Current == 1200amps/turn)")
 # Sidebar for parameter input
 st.sidebar.header("Adjust Parameters")
 # User inputs
-TMS_width = st.sidebar.slider("TMS x-dimension (width) (meters)", min_value=5.0, max_value=7.0, step=1.0, value=7.0)
+TMS_width = st.sidebar.slider("TMS x-dimension (width) (meters)", min_value=5.0, max_value=7.440, step=0.01, value=7.440)
 PS_connector_length = st.sidebar.slider("Length of power supply interconnects (pos/neg)(meter)", min_value=1.0, max_value=15.0, step=1.0, value=4.0)
 PS_connector_efficiency = st.sidebar.slider("Interconnect resistivity compared to copper bars (%)", min_value=10.0, max_value=1000.0, step=10.0, value=100.0) / 100
 PS_number = st.sidebar.slider("Number of powersupplies (#)", min_value=1.0, max_value=6.0, step=1.0)
